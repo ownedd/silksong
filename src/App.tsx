@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-900">
       <header className="sticky top-0 z-10 bg-gray-800/80 backdrop-blur-sm h-16 flex justify-between items-center border-b border-gray-700 shadow-sm px-4">
-        <h2 className="text-xl font-semibold text-white">Mi Blog</h2>
+        <h2 className="text-xl font-semibold text-white">Silksong</h2>
         <SignOutButton />
       </header>
       <main className="flex-1 p-8">
@@ -37,7 +37,7 @@ function Content() {
   return (
     <div className="flex flex-col gap-8">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Mi Blog Silksong</h1>
+        <h1 className="text-4xl font-bold text-white mb-4">Silksong</h1>
         <Authenticated>
           <p className="text-xl text-gray-300">Bienvenido, {loggedInUser?.name || loggedInUser?.email || "amigo"}!</p>
         </Authenticated>

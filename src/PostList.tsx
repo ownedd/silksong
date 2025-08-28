@@ -46,7 +46,7 @@ export function PostList() {
   // }
 
   return (
-    <div className="space-y-6 ">
+    <div className="space-y-6 relative">
       <h2 className="text-2xl font-semibold text-white">Mis Entradas</h2>
 
       <div className="mt-4">
@@ -75,7 +75,7 @@ export function PostList() {
       </div>
 
       {status === "LoadingFirstPage" && posts.length === 0 ? (
-        <div className="flex justify-center items-center py-8">
+        <div className="absolute inset-0 flex items-center justify-center bg-black/40">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400"></div>
         </div>
       ) : posts.length === 0 ? (
@@ -93,7 +93,7 @@ export function PostList() {
           )}
         </div>
       ) : (
-        <div className="space-y-6 h-[70vh] overflow-y-auto pr-2" onScroll={handleScroll}>
+        <div className="space-y-6 h-[70vh] min-h-[300px] overflow-y-auto pr-2" onScroll={handleScroll}>
           {posts.map((post) => (
             <article key={post._id} className="bg-gray-800 rounded-lg shadow-sm border border-gray-700 overflow-hidden">
               {post.imageUrl && (
