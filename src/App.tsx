@@ -37,11 +37,9 @@ function Content() {
   return (
     <div className="flex flex-col gap-8">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Mi Blog Personal</h1>
+        <h1 className="text-4xl font-bold text-white mb-4">Mi Blog Silksong</h1>
         <Authenticated>
-          <p className="text-xl text-gray-300">
-            Bienvenido, {loggedInUser?.name || loggedInUser?.email || "amigo"}!
-          </p>
+          <p className="text-xl text-gray-300">Bienvenido, {loggedInUser?.name || loggedInUser?.email || "amigo"}!</p>
         </Authenticated>
         <Unauthenticated>
           <p className="text-xl text-gray-300">Inicia sesión para crear entradas</p>
